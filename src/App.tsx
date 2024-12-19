@@ -1,13 +1,17 @@
+import { useReducer } from "react"
 import MenuItem from "./components/MenuItem"
 import OrderContents from "./components/OrderContents"
 import OrderTotals from "./components/OrderTotals"
 import TipPercentageForm from "./components/TipPercentageForm"
 import { menuItems } from "./data/db"
 import useOrder from "./hooks/useOrder"
+import { initialState, orderReducer } from "./reducers/order-reducer"
 
 function App() {
 
   const { order, tip, setTip, addItem, removeItem, placeOrder } = useOrder()
+
+  const [state, dispatch] = useReducer(orderReducer, initialState)
 
   return (
 
@@ -30,7 +34,7 @@ function App() {
           </div>
         </div>
         <div className="border border-dashed border-x-slate-300 p-5 rounded-lg space-y-10">
-          {order.length  ? (
+          {order.length ? (
             <>
               <OrderContents
                 order={order}
