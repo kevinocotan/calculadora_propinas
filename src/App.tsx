@@ -28,7 +28,7 @@ function App() {
               <MenuItem
                 key={item.id}
                 item={item}
-                addItem={addItem}
+                dispatch={dispatch}
               />
             ))}
           </div>
