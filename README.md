@@ -2,5 +2,4 @@
 
 ![image](https://github.com/user-attachments/assets/558fd4da-5cdb-4829-b45b-b29232447158)
 
-
-
+Cambiar read me imagines actualizar
